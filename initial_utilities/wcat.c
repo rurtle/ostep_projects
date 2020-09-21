@@ -24,7 +24,7 @@ int read_file_through_wcat(char *pathname)
 	char buffer[BUFF_LEN] = "";
 	FILE *fp = fopen(pathname, "r");
 	if (fp == NULL) {
-		perror("Error ");
+		printf("wcat: cannot open file\n");
 		ret = 1;
 	} else {
 		/* File opened successfully. Time to read from it */

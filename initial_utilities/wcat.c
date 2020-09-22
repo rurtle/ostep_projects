@@ -17,7 +17,7 @@
 /*
  * @brief	Utility function to read a file
  */
-int read_file_through_wcat(char *pathname)
+int wcat_readfile(char *pathname)
 {
 	int ret = 0;
 	int errsv = 0;
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	} else {
 		/* Print the number of files to read */
 		for (int i = 1; i < argc; i++) {
-			ret = read_file_through_wcat(argv[i]);
+			ret = wcat_readfile(argv[i]);
 			if (ret != 0)							/* "exit with status code 1" */
 				return 1;
 		}
